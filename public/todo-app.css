@@ -12,7 +12,7 @@ body {
 }
 
 .MyTodo-title {
-  font-size: 45px;
+  font-size: 36px;
   font-weight: 600;
   line-height: 1.7;
   margin-bottom: 12px;
@@ -21,14 +21,14 @@ body {
 
 .MyTodo {
   align-items: stretch;
-  height: 42px;
+  height: 38px;
   display: flex;
   margin-bottom: 30px;
 }
 
 .MyTodo-text {
   padding: 6px 12px;
-  font-size: 22px;
+  font-size: 20px;
   color: #453c52;
   margin-right: 10px;
   fill: #ffffff;
@@ -70,7 +70,7 @@ body {
 
 .SectionTitle-text {
   font-family: Open Sans, sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   margin-right: 8px;
   color: #453c52;
@@ -80,7 +80,7 @@ body {
 
 .SectionTitleCount {
   font-family: Open Sans, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #453c52;
   letter-spacing: 0.09px;
 }
@@ -92,15 +92,14 @@ body {
   color: #453c52;
 }
 
-.MyTodoItem-container {
-  align-items: center;
-  display: flex;
-  padding: 8px 24px;
+.MyTodoItem-text {
+  color: #453C52;
+  font-size: 20px;
 }
 
 .MyTodoItem-checkbox {
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 16px;
   cursor: pointer;
   position: relative;
 }
@@ -116,6 +115,19 @@ body {
 
 .MyTodoItem-delete {
   margin-left: 8px;
+}
+
+
+.MyTodoItem-Container {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 6px;
+  color: #453C52;
+  padding: 1px 6px;
+}
+
+.MyTodoItem-Container:hover {
+  background-color: #F1EDF7;
 }
 
 .MyTodoItem-dueDate {
