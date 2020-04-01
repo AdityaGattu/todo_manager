@@ -99,7 +99,7 @@ body {
 
 .MyTodoItem-checkbox {
   width: 20px;
-  height: 16px;
+  height: 1px;
   cursor: pointer;
   position: relative;
 }
