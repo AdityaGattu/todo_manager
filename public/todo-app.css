@@ -58,13 +58,13 @@ body {
 }
 
 .Section {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .SectionTitle {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
   color: #453c52;
 }
 
@@ -95,13 +95,25 @@ body {
 .MyTodoItem-text {
   color: #453C52;
   font-size: 20px;
+  margin-left:10px;
+  padding-bottom:7px;
 }
 
 .MyTodoItem-checkbox {
-  width: 20px;
-  height: 1px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
   position: relative;
+}
+
+input[type=checkbox]
+{
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  padding: 10px;
 }
 
 .MyTodoItem-overdueLabel {
