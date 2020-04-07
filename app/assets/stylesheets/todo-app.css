@@ -1,0 +1,171 @@
+body {
+  font-family: Open Sans, sans-serif;
+  max-width: 520px;
+  margin: 0 auto;
+  margin-top: 100px;
+  line-height: 1;
+}
+
+.MyTodoMain {
+  display: flex;
+  align-items: center;
+}
+
+.MyTodo-title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #453c52;
+}
+
+.MyTodo {
+  align-items: stretch;
+  height: 38px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.MyTodo-text {
+  padding: 6px 12px;
+  font-size: 20px;
+  color: #453c52;
+  margin-right: 10px;
+  fill: #ffffff;
+  background: #ffffff;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+}
+
+.MyTodoItem-dueDate{
+  font-size: 5px;
+  margin-left: 10px;
+  padding-bottom: 5px;
+  align-items: center;
+  color: violet;
+}
+
+.MyTodo-date {
+  padding: 6px;
+  font-size: 16px;
+  color: #453c52;
+  margin-right: 10px;
+  background: #ffffff;
+  fill: #ffffff;
+  border: 2px solid #bfb8cc;
+  border-radius: 4px;
+}
+
+.MyTodo-button {
+  font-size: 14px;
+  color: white;
+  background: #48bb78;
+  border-radius: 6px;
+  padding: 6px 22px;
+  opacity: 90%;
+}
+
+.Section {
+  margin-bottom: 20px;
+}
+
+.SectionTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #453c52;
+}
+
+.SectionTitle-text {
+  font-family: Open Sans, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 8px;
+  color: #453c52;
+  letter-spacing: 0.1px;
+  line-height: 1.4;
+}
+
+.SectionTitleCount {
+  font-family: Open Sans, sans-serif;
+  font-size: 16px;
+  color: #453c52;
+  letter-spacing: 0.09px;
+}
+
+.MyTodoItem {
+  font-size: 24px;
+
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: #453c52;
+}
+
+.MyTodoItem-text {
+  color: #453C52;
+  font-size: 20px;
+  margin-left:10px;
+  padding-bottom:9px;
+}
+
+.MyTodoItem-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type=checkbox]
+{
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  padding: 10px;
+}
+
+.MyTodoItem-overdueLabel {
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  color: #c53030;
+  letter-spacing: 0.09px;
+  display: inline;
+  margin-left: 10px;
+}
+
+
+
+
+.MyTodoItem-Container {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 6px;
+  color: #453C52;
+  padding: 1px 6px;
+}
+
+.MyTodoItem-Container:hover {
+  background-color: #F1EDF7;
+}
+
+.MyTodoItem-delete{
+  width: 5px;
+}
+
+.MyTodoItem-delete {
+  margin-left: 8px;
+  visibility: hidden;
+}
+
+.MyTodoItem-Container:hover .MyTodoItem-delete{
+ visibility: visible;
+}
+
+.MyTodoItem-dueDate {
+  font-family: Open Sans, sans-serif;
+  font-size: 17px;
+  color: #726a7e;
+  letter-spacing: 0.09px;
+  margin-left: 10px;
+}
