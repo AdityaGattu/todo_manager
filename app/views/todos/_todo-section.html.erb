@@ -4,7 +4,7 @@
         <p class="SectionTitleCount"><%=todos.completed.count%>/<%=todos.count%></p>
     </div>
       <ul>
-        <% Todo.all.each do |todo| %>
+        <% todos.each do |todo| %>
           <li class='MyTodoItem'>
             <div class='MyTodoItem-Container'>
                <input class='MyTodoItem-checkbox' type="checkbox" name="completed" value='1' <%= todo.completed ? "checked" : "" %>>

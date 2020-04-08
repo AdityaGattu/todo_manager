@@ -1,11 +1,9 @@
 class Todo < ActiveRecord::Base
-
   def to_displayable_string
     display_status = completed ? "[X]" : "[ ]"
     display_date = due_today? ? nil : due_date
     "#{id}.  #{display_status} #{todo_text} #{display_date}"
   end
-
 
   def self.add_task(todo)
     create!(todo_text: todo[:todo_text], due_date: Date.today + todo[:due_in_days])
@@ -34,6 +32,4 @@ class Todo < ActiveRecord::Base
   def self.not_completed
     all.where(completed: false)
   end
-
-
 end
