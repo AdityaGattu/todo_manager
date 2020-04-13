@@ -5,12 +5,12 @@
   </div>
   <ul>
     <% todos.each do |todo| %>
-  <li class='MyTodoItem'>
-    <div class='MyTodoItem-Container'>
+    <li class='MyTodoItem'>
+      <div class='MyTodoItem-Container'>
 
-       <%= form_with(url:"/todos/#{todo.id}", method: "put") do %>
-       <%=check_box_tag(name="completed",value = "1",checked = todo.completed,options = {onclick: "this.form.submit()"})%>
-       <% end %>
+        <%= form_with(url:"/todos/#{todo.id}", method: "put") do %>
+        <%=check_box_tag(name="completed",value = "1",checked = todo.completed,options = {onclick: "this.form.submit()"})%>
+        <% end %>
 
         <%class_name = todo.completed ? "MyTodoItem-text-completed" : "MyTodoItem-text" %>
         <p class=<%=class_name%>> <%=todo.todo_text%> </p>
@@ -24,8 +24,8 @@
           <%= image_submit_tag("trash.png")   %>
           <% end %>
         </a>
-    </div>
-   </li>
+      </div>
+    </li>
     <% end %>
   </ul>
 </section>
