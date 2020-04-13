@@ -5,8 +5,11 @@ class Todo < ActiveRecord::Base
     "#{id}.  #{display_status} #{todo_text} #{display_date}"
   end
 
-  def self.add_task(todo)
-    create!(todo_text: todo[:todo_text], due_date: Date.today + todo[:due_in_days])
+  def self.add_task(new_task)
+    todo_text = new_task[:todo_text]
+    due_date = DateTime.parse(new_task[:due_date])
+    completed = false
+    create!(todo_text: todo_text, due_date: due_date, completed: completed)
   end
 
   def self.due_today
