@@ -16,7 +16,7 @@
           <p class=<%= class_name %>> <%= todo.todo_text %> </p>
 
           <% if show_due_date %>
-            <p class='MyTodoItem-dueDate'><%= todo.due_date.to_s(:short)%></p>
+            <p class='MyTodoItem-dueDate'><%= todo.due_date.to_s(:short) %></p>
           <% end %>
 
           <a class="MyTodoItem-delete" href="javascript:void(0)">
