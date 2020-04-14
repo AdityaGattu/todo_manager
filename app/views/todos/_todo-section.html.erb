@@ -1,31 +1,31 @@
 <section class="Section">
   <div class="SectionTitle">
     <p class="SectionTitle-text"><%= section_title %></p>
-    <p class="SectionTitleCount"><%=todos.completed.count%>/<%=todos.count%></p>
+    <p class="SectionTitleCount"><%= todos.completed.count %>/<%= todos.count %></p>
   </div>
   <ul>
     <% todos.each do |todo| %>
-    <li class='MyTodoItem'>
-      <div class='MyTodoItem-Container'>
+      <li class='MyTodoItem'>
+        <div class='MyTodoItem-Container'>
 
-        <%= form_with(url:"/todos/#{todo.id}", method: "put") do %>
-        <%=check_box_tag(name="completed",value = "1",checked = todo.completed,options = {onclick: "this.form.submit()"})%>
-        <% end %>
-
-        <%class_name = todo.completed ? "MyTodoItem-text-completed" : "MyTodoItem-text" %>
-        <p class=<%=class_name%>> <%=todo.todo_text%> </p>
-
-        <% if show_due_date %>
-        <p class='MyTodoItem-dueDate'><%= todo.due_date.to_s(:short)%></p>
-        <%end%>
-
-        <a class="MyTodoItem-delete" href="javascript:void(0)">
-          <%= form_with(url: "/todos/#{todo.id}", method:"delete") do %>
-          <%= image_submit_tag("trash.png")   %>
+          <%= form_with(url:"/todos/#{todo.id}", method: "put") do %>
+            <%= check_box_tag(name="completed",value = "1",checked = todo.completed,options = {onclick: "this.form.submit()"}) %>
           <% end %>
-        </a>
-      </div>
-    </li>
+
+          <% class_name = todo.completed ? "MyTodoItem-text-completed" : "MyTodoItem-text" %>
+          <p class=<%= class_name %>> <%= todo.todo_text %> </p>
+
+          <% if show_due_date %>
+            <p class='MyTodoItem-dueDate'><%= todo.due_date.to_s(:short)%></p>
+          <% end %>
+
+          <a class="MyTodoItem-delete" href="javascript:void(0)">
+            <%= form_with(url: "/todos/#{todo.id}", method:"delete") do %>
+              <%= image_submit_tag("trash.png")   %>
+            <% end %>
+          </a>
+        </div>
+      </li>
     <% end %>
   </ul>
 </section>
