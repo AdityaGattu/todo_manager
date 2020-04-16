@@ -1,4 +1,8 @@
 class Todo < ActiveRecord::Base
+  belongs_to :user
+  #has table user
+  #todo table will contain user id.
+
   def to_displayable_string
     display_status = completed ? "[X]" : "[ ]"
     display_date = due_today? ? nil : due_date
