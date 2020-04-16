@@ -7,10 +7,10 @@ class UsersController < ApplicationController
 
   def create
     User.create!(
-      firstname = params[:firstname],
-      lastname = params[:lastname],
-      email = params[:email],
-      password = params[:password],
+      firstname: params[:firstname],
+      lastname:params[:lastname],
+      email: params[:email],
+      password: params[:password],
     )
     redirect_to "/"
   end
