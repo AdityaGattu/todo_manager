@@ -11,13 +11,6 @@ class Todo < ActiveRecord::Base
     "#{id}.  #{display_status} #{todo_text} #{display_date}"
   end
 
-  def self.new_task(new_task)
-    todo_text = new_task[:todo_text]
-    due_date = new_task[:due_date]
-    completed = false
-    create!(todo_text: todo_text, due_date: due_date, completed: completed)
-  end
-
   def self.due_today
     all.where("due_date = ?", Date.today)
   end
