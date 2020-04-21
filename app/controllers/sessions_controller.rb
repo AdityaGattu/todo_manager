@@ -12,5 +12,11 @@ class SessionsController < ApplicationController
       flash[:error] = "Your login attempt is invalid"
       redirect_to new_sessions_path
     end
+
+    def destroy
+      session[:current_user_id] = nil
+      @current_user = nil
+      redirect_to "/"
+    end
   end
 end
