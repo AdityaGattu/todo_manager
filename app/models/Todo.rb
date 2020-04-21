@@ -13,7 +13,7 @@ class Todo < ActiveRecord::Base
 
   def self.new_task(new_task)
     todo_text = new_task[:todo_text]
-    due_date = DateTime.parse(new_task[:due_date])
+    due_date = new_task[:due_date]
     completed = false
     create!(todo_text: todo_text, due_date: due_date, completed: completed)
   end
