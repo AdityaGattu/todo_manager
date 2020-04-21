@@ -1,5 +1,5 @@
 class AddUserIdToTodos < ActiveRecord::Migration[6.0]
   def change
-    add_column :todos, :user_id, :bigint
+    add_reference :todos, :user, null: false, foreign_key: true
   end
 end

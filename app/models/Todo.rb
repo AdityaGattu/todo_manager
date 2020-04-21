@@ -2,6 +2,8 @@ class Todo < ActiveRecord::Base
   belongs_to :user
   #has table user
   #todo table will contain user id.
+  validates :todo_text, presence: true
+  validates :due_date, presence: true
 
   def to_displayable_string
     display_status = completed ? "[X]" : "[ ]"
@@ -9,7 +11,7 @@ class Todo < ActiveRecord::Base
     "#{id}.  #{display_status} #{todo_text} #{display_date}"
   end
 
-  def self.add_task(new_task)
+  def self.new_task(new_task)
     todo_text = new_task[:todo_text]
     due_date = DateTime.parse(new_task[:due_date])
     completed = false
