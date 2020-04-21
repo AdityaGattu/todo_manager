@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find(email: params[:email])
-    if user.authenticate(params[:password])
+    if user && user.authenticate(params[:password])
       render plain: "correct password"
     else
       render plain: "incorrect password"

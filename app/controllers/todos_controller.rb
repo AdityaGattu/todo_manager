@@ -4,11 +4,13 @@ class TodosController < ApplicationController
 
   def index
     #render plain: Todo.all.order(:due_date).map { |todo| todo.to_pleasant_string }.join("\n")
-    render "index"
+    @todos = current_user.todos
+    render :index
   end
 
   def show
     id = params[:id]
+    todo = current_user.todos.find(id)
     render plain: Todo.find(id).to_pleasant_string
   end
 
