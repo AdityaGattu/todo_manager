@@ -7,3 +7,24 @@
   margin-bottom: 20px;
   font-size: 16px;
 }
+
+.UserHeader {
+  padding: 10px;
+  background-color: lightgray;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Flash-error {
+  color: darkred;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.Flash-success {
+  color: darkgreen;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
