@@ -1,8 +1,5 @@
-# todos_controller.rb
 class TodosController < ApplicationController
-
   def index
-    #render plain: Todo.all.order(:due_date).map { |todo| todo.to_pleasant_string }.join("\n")
     @todos = current_user.todos
     render :index
   end
@@ -34,7 +31,6 @@ class TodosController < ApplicationController
     id = params[:id]
     completed = params[:completed]
     todo = Todo.update(id, completed: completed)
-    #render plain: "Updated todo completed status to #{completed}"
     redirect_to todos_path
   end
 
@@ -46,6 +42,6 @@ class TodosController < ApplicationController
   end
 
   def all
-    render #all
+    render
   end
 end

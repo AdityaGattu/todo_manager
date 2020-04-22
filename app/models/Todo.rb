@@ -1,7 +1,5 @@
 class Todo < ActiveRecord::Base
   belongs_to :user
-  #has table user
-  #todo table will contain user id.
   validates :todo_text, presence: true
   validates :due_date, presence: true
 

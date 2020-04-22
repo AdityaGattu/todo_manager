@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   end
 
   def new
-   # render "users/new"
   end
 
   def create
@@ -24,5 +23,4 @@ class UsersController < ApplicationController
   def check
     render plain: User.check(params)
   end
-
 end
